@@ -56,6 +56,35 @@ The program:
 
 ---
 
+## ESP8266_Servo_Pot_Oled
+
+**Target board:** NodeMCU ESP8266 v3 with integrated SSD1306 OLED
+
+This example implements direct potentiometer-based control of a servo.
+
+The program:
+
+- Reads a potentiometer connected as a voltage divider between 3.3V and GND (wiper to A0).
+- Maps the ADC reading (0–1023) directly to a servo angle (0–180 degrees).
+- Commands the servo using angle-based control.
+- Displays on the OLED:
+  - Raw ADC value
+  - Current servo angle (degrees)
+  - Equivalent pulse width (microseconds)
+- Uses Serial at 74880 baud to align with the ESP8266 boot output.
+
+The OLED layout is arranged so that dynamic measurement data appears in the blue section of bicolor SSD1306 displays, avoiding overlap with the yellow top band.
+
+**Purpose:**
+
+- Validate analog input acquisition on the ESP8266.
+- Correlate ADC readings with servo movement.
+- Observe real-time response without digital filtering.
+- Provide a simple open-loop human interface for servo positioning.
+- Serve as a baseline for future experiments involving filtering, calibration, or closed-loop control.
+
+---
+
 Future examples may include:
 
 - ADC reading and filtering
