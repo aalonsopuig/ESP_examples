@@ -35,22 +35,24 @@ The example is intentionally simple and static, focusing purely on display initi
 
 **Target board:** NodeMCU ESP8266 v3 with integrated SSD1306 OLED
 
-This example extends the OLED test by adding servo control.
+This example performs a continuous servo sweep using angle-based control while displaying both the logical angle and the equivalent pulse width in microseconds.
 
 The program:
 
-- Initializes the OLED display.
-- Attaches a servo to a GPIO pin.
+- Initializes the SSD1306 OLED display over I2C.
+- Attaches a servo to a GPIO pin using a defined pulse range.
 - Moves the servo smoothly from 0° to 180° and back continuously.
-- Displays the current angle on the OLED in real time.
-- Outputs the angle value to the Serial monitor.
+- Displays the current angle (degrees) on the OLED.
+- Displays the corresponding pulse width (µs) derived from the configured minimum and maximum pulse values.
+- Uses Serial at 74880 baud to align with the ESP8266 boot output.
 
 **Purpose:**
 
 - Validate PWM signal generation at 3.3V logic level.
-- Test servo behavior using an external power supply.
-- Verify simultaneous operation of I2C (OLED) and PWM (servo).
-- Provide a clean baseline for future closed-loop or distributed control experiments.
+- Correlate logical angle commands with actual pulse width values.
+- Analyze real mechanical travel versus theoretical 0–180° range.
+- Verify stable coexistence of I2C (OLED) and PWM (servo) peripherals.
+- Provide a structured baseline for future experiments such as calibrated limits, closed-loop control, or distributed robotic actuation.
 
 ---
 
