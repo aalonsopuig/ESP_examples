@@ -14,6 +14,8 @@ All examples are structured with incremental validation in mind, testing one sub
 
 This program is a minimal hardware bring-up test for the ESP8266 with an SSD1306 OLED display.
 
+<img width="800" src="https://github.com/user-attachments/assets/af37b034-7ca2-43ef-b4b2-e0c806ed3f52" />
+
 The program:
 
 - Initializes Serial at `74880` baud to match the ESP8266 ROM boot output.
@@ -36,6 +38,8 @@ The example is intentionally simple and static, focusing purely on display initi
 **Target board:** NodeMCU ESP8266 v3 with integrated SSD1306 OLED
 
 This example performs a continuous servo sweep using angle-based control while displaying both the logical angle and the equivalent pulse width in microseconds.
+
+<img width="800" src="https://github.com/user-attachments/assets/9b95c10e-9ea3-4c95-af24-610e2231a0a1" />
 
 The program:
 
@@ -61,6 +65,8 @@ The program:
 **Target board:** NodeMCU ESP8266 v3 with integrated SSD1306 OLED
 
 This example implements direct potentiometer-based control of a servo.
+
+<img width="800" src="https://github.com/user-attachments/assets/f610df04-5303-431a-b0d5-c30c467d978a" />
 
 The program:
 
